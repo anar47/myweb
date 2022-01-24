@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+@font-face {
+  font-family: 'Cervanttis';
+  src: url('../css/OTF/Cervanttis.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Code Next';
+  src: url('../css/OTF/CodeNext-ExtraBold.otf')  format('opentype');
+}
+
+@font-face {
+  font-family: 'break';
+  src: url('../css/OTF/break regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Rafale';
+  src: url('../css/OTF/Rafale-BG.otf')  format('opentype');
+}

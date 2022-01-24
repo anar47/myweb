@@ -1,0 +1,235 @@
+@import url(fonts.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+.bread .breadcrumbs{
+    background: transparent;
+    position: absolute;
+    z-index: 1;
+    width: 450px;
+    height: 80px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 100px;
+}
+
+.bread .breadcrumbs ul{
+    list-style-type: none;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumbs ul,
+.breadcrumbs ul li a{
+  display: flex;
+}
+
+.bread .breadcrumbs a:link{
+  text-decoration: none!important;
+}
+
+.breadcrumbs ul li{
+  margin-right: 30px;
+  position: relative;
+}
+
+.bread ul li:before{
+  content: ">";
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  right: -20px;
+  color: white;
+}
+
+.bread ul li:last-child:before{
+  display: none;
+}
+
+.breadcrumbs ul li a{
+  align-items: baseline;
+  color: white;
+}
+
+.breadcrumbs ul li a .icon{
+  margin-right: 5px;
+}
+
+.breadcrumbs ul li a p{
+  font-size: 12px;
+}
+
+.breadcrumbs ul li.active a{
+  color: black;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+.swiper-slide:nth-child(1){
+   background: #ffe713;
+}
+.swiper-slide:nth-child(2){
+    background: #000aff;
+}
+.swiper-slide:nth-child(3){
+    background: #000;
+}
+.swiper-slide{
+    text-align: center;
+    padding-top: 200px;
+}
+
+.swiper-slide .img-group img{
+    width: 180px;
+    height: 180px;
+}
+
+h1{
+    font-size: 100px;
+    font-family: "Josefin Sans";
+    color: #fff;
+}
+.swiper-pagination{
+    bottom: 150px !important;
+}
+.swiper-pagination .swiper-pagination-bullet{
+    position: relative;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    opacity: 1;
+    color: transparent;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 50px !important;
+}
+.swiper-pagination .swiper-pagination-bullet:before{
+    content:"";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    opacity: 0.5;
+}
+.swiper-pagination .swiper-pagination-bullet:after{
+    content:"";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:after{
+    width: 100%;
+    animation: paginationLine 5s linear;
+}
+@keyframes paginationLine{
+    from{
+        width: 0;
+    }
+}
+.img-group{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    transition: all cubic-bezier(.97, .02, .02, .98) 2s;
+}
+.swiper-slide img{
+    position: absolute;
+    transition: all linear .1s;
+    animation: rotateReversed linear 3s;
+}
+@keyframes rotateReversed{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.swiper-slide.swiper-slide-active img{
+    animation: rotate linear 100s infinite;
+}
+@keyframes rotate{
+    to{
+        transform: rotate(720deg);
+    }
+}
+.swiper-slide h1{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 100%;
+    transition: all cubic-bezier(.66,.51,.02,.98) 2s;
+    text-transform: uppercase;
+}
+
+.swiper-slide h2{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 100%;
+    transition: all cubic-bezier(.66,.51,.02,.98) 2s;
+    color: white;
+    font-size: 60px;
+}
+
+.swiper-slide h3{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 100%;
+    transition: all cubic-bezier(.66,.51,.02,.98) 3s;
+    color: white;
+    font-size: 30px;
+    padding-top: 15%;
+}
+
+@media screen and (min-width: 501px) and (max-width: 995px){
+     h1, h2{
+         padding-top: calc(100vh/3);
+     }
+     h3{
+         margin-top: calc(100vh/2.5);
+     }
+}
+
+.hobby1{
+    left: 0;
+    top: 45vh;
+    z-index: -1;
+}
+.hobby2{
+    left: 50vw;
+    top: 18vh;
+    z-index: 1;
+}
+.hobby3{
+    left: 60vw;
+    top: 60vh;
+    z-index: 1;
+}
+.hobby4{
+    left: 20vw;
+    top: 10vh;
+    z-indeX: -1;
+}

@@ -1,0 +1,239 @@
+@import url(fonts.css);
+
+html{
+  margin: 0;
+}
+.header-area{
+  background-color: black;
+  position: relative;
+  display: -webkit-box;
+}
+
+.header_area .toggle-btn{
+  position: absolute;
+  margin: 1.4em;
+  padding: 1em;
+  width: 40px;
+  height: 12px;
+  right: 0;
+  z-index: 2;
+}
+
+.header_area .one{
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: white;
+    transform: matrix(1, 0, 0, 1, -20, 1);
+}
+
+.header_area .two{
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    margin-top: 12px;
+    transform: matrix(1, 0, 0, 1, -20, 1);
+}
+
+.header_area .menu{
+    z-index: 0;
+    background: #101010;
+    height: 100vh;
+    width: 100%;
+    top: 100%;
+    display: none;
+}
+
+.header_area .menu .data{
+    text-align: center;
+    padding: 0;
+    padding-top: 20vh;
+}
+
+.header_area .menu .data ul{
+  list-style: none;
+}
+
+.header_area  .data ul li{
+    color: transparent;
+    font-family: "Code Next";
+    font-size: 5em;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 800;
+}
+
+.header_area .data ul li #menu{
+  text-decoration: none;
+  color: transparent;
+  font-family: "Code Next";
+  -webkit-text-stroke: 1px #fff;
+}
+
+.header_area .data ul li #menu:hover{
+   color: #fff;
+   -webkit-text-stroke: 1px #000;
+   transition: 0.5s;
+}
+
+.header_area .data ul li #menu:hover:before{
+  color: #000aff;
+  z-index: 1;
+  -webkit-text-stroke: 1px #fff;
+  transform: translate(5px, -5px);
+}
+
+.header_area .data ul li #menu:hover:after{
+  color: #ffe713;
+  z-index: 2;
+  -webkit-text-stroke: 1px #fff;
+  transform: translate(10px, -10px);
+}
+
+.header_area .data ul li a:before,
+.header_area .data ul li a:after{
+  content: attr(data-text);
+  position: absolute;
+  right: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 500px) {
+  .header_area  .data ul li{
+    font-size: 3em;
+  }
+  .header_area .menu .data{
+    padding-top: 30vh;
+  }
+}
+
+/* Start footer area */
+
+footer.footer-area{
+  height: 20vh;
+  background: #000;
+  display: grid;
+}
+
+footer.footer-area .social .icons{
+  display: inline-flex;
+  margin-top: 7vh;
+}
+
+footer.footer-area .social .icons a{
+  color: whitesmoke;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  margin: 0 20px;
+}
+
+footer.footer-area .social .icons a .layer{
+  width: 55px;
+  height: 55px;
+  transition: transform 0.8s;
+}
+
+footer.footer-area .social .icons a .layer span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+footer.footer-area .social .icons a .layer span.fab{
+  font-size: 30px;
+  line-height: 55px;
+  text-align: center;
+}
+
+@media screen and (max-width: 380px) {
+    footer.footer-area .social .icons a .layer span {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    footer.footer-area .social .icons a .layer span.fab {
+        font-size: 20px;
+        line-height: 35px;
+    }
+}
+
+
+footer.footer-area .social a:hover > .layer{
+  text-decoration: none!important;
+  transform: perspective(1000px) rotate(-35deg) skew(20deg);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+  cursor: pointer;
+}
+
+footer.footer-area .social a:hover .layer span:nth-child(1){
+  opacity: 0.2;
+}
+
+footer.footer-area .social a:hover .layer span:nth-child(2){
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+footer.footer-area .social a:hover .layer span:nth-child(3){
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+footer.footer-area .social a:hover .layer span:nth-child(4){
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+
+footer.footer-area .social a:hover .layer span:nth-child(5){
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+footer.footer-area .social a:hover:nth-child(1) .layer span{
+  background: linear-gradient(to bottom, #00c6ff, #0078ff);
+	-webkit-background-clip: padding-box;
+	border-color: transparent;
+}
+
+footer.footer-area .social a:hover:nth-child(2) .layer span{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+	-webkit-background-clip: padding-box;
+	border-color: transparent;
+}
+
+footer.footer-area .social a:hover:nth-child(3) .layer span{
+  background: linear-gradient(to top, #ff0000, #ff7770);
+	-webkit-background-clip: padding-box;
+	border-color: transparent;
+}
+
+footer.footer-area .social a:hover:nth-child(4) .layer span{
+  background: linear-gradient(to top, #333, #f5f5f5);
+	-webkit-background-clip: padding-box;
+	border-color: transparent;
+}
+
+
+/* End footer area */
+
+#cursors .cursor{
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  z-index: 10000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
